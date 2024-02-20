@@ -4,10 +4,18 @@
     padding: 0;
   }
 
+.backgroundColor1{
+    background-color: #F29F05;
+}
+
+.backgroundColor2{
+    background-color: #F2CB05;
+}
+
 body{
     margin: 5px 0 5px 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: mediumseagreen;
+    background-color: #F29F05;
 }  
 
 #footerConfig{
@@ -21,4 +29,9 @@ body{
 #conteudo{
     display: flex;
     justify-content: center;
+}
+
+#conteudoColunas{
+    background-color: white;
+    border-radius: 5px;
 }

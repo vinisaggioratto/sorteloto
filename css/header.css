@@ -1,16 +1,19 @@
-#headerConfig{
-    margin-top: 8px;
-    margin-bottom: 15px;
-    /*border: 2px solid red;*/
-    height: 130px;
-}
 
 #headerConfig{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    height: 130px;
+
+}
+
+#headerConfig a{
+    text-decoration: none;
+    color: #267365;
 }
 
 #menuNavbar{
