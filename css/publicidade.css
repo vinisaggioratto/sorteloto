@@ -1,0 +1,11 @@
+.publicidadeHorizontal{
+    height: 150px;
+    border: 2px solid red;
+    margin: 5px 0 5px 0;
+}
+
+#publicidadeRight{
+    border: 2px solid red;
+    margin-right: 2px;
+    width: 250px;
+}

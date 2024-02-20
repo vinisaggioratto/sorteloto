@@ -7,29 +7,86 @@
     <title>Sorte Milionária Loterias</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/publicidade.css">
 </head>
 
 <body onload="exibirResultado()">
-    <div class="container">
-        <div class="row">
-            <div class="col-10">
-<!--
+    <div class="container-fluid">
+        <div class="row" id="headerConfig">
+            <div class="col-12">
+                Sorte Milionária
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menuNavbar">
+            <div class="container-fluid">
+                <!--
+              <a class="navbar-brand" href="#">Início</a>-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Início</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Loterias
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Dia de Sorte</a></li>
+                                <li><a class="dropdown-item" href="#">Dupla Sena</a></li>
+                                <li><a class="dropdown-item" href="#">Federal</a></li>
+                                <li><a class="dropdown-item" href="#">Lotofácil</a></li>
+                                <li><a class="dropdown-item" href="#">Lotomania</a></li>
+                                <li><a class="dropdown-item" href="#">+Milionária</a></li>
+                                <li><a class="dropdown-item" href="#">Mega-Sena</a></li>
+                                <li><a class="dropdown-item" href="#">Quina</a></li>
+                                <li><a class="dropdown-item" href="#">Super Sete</a></li>
+                                <li><a class="dropdown-item" href="#">Timemania</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gerador de jogos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Doações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row" id="conteudo">
+            <div class="col-8">
+                <!--
                 <div>
                     <input type="button" value="CARREGAR" onclick="exibirResultado()">
                 </div>
--->
+                -->
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
                                 onclick="exibirResultado()">
-                                Mega sena
+                                Mega-Sena
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show"
                             data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body overflow-x-auto">
                                 <table class="table table-striped table-hover" id="tabela-cadastros">
                                     <tbody id="bodytabela">
 
@@ -42,11 +99,11 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Loto fácil
+                                Lotofácil
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body overflow-x-auto">
                                 <strong>This is the second item's accordion body.</strong> It is hidden by default,
                                 until the
                                 collapse plugin adds the appropriate classes that we use to style each element. These
@@ -64,12 +121,38 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                +Milionaria
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body overflow-x-auto">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                                the
+                                collapse plugin adds the appropriate classes that we use to style each element. These
+                                classes
+                                control the overall appearance, as well as the showing and hiding via CSS transitions.
+                                You can
+                                modify any of this with custom CSS or overriding our default variables. It's also worth
+                                noting
+                                that just about any HTML can go within the <code>.accordion-body</code>, though the
+                                transition
+                                does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 publicidadeHorizontal">
+                        PUBLICIDADE HORIZONTAL
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                maismilionaria
+                                Quina
                             </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body overflow-x-auto">
                                 <strong>This is the third item's accordion body.</strong> It is hidden by default, until
                                 the
                                 collapse plugin adds the appropriate classes that we use to style each element. These
@@ -88,11 +171,11 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                quina
+                                Lotomania
                             </button>
                         </h2>
                         <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body overflow-x-auto">
                                 <strong>This is the third item's accordion body.</strong> It is hidden by default, until
                                 the
                                 collapse plugin adds the appropriate classes that we use to style each element. These
@@ -111,11 +194,11 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                lotomania
+                                Timemania
                             </button>
                         </h2>
                         <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body overflow-x-auto">
                                 <strong>This is the third item's accordion body.</strong> It is hidden by default, until
                                 the
                                 collapse plugin adds the appropriate classes that we use to style each element. These
@@ -130,15 +213,18 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 publicidadeHorizontal">
+                        PUBLICIDADE HORIZONTAL
+                    </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                timemania
+                                Dupla Sena
                             </button>
                         </h2>
                         <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body overflow-x-auto">
                                 <strong>This is the third item's accordion body.</strong> It is hidden by default, until
                                 the
                                 collapse plugin adds the appropriate classes that we use to style each element. These
@@ -157,11 +243,11 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                duplasena
+                                Federal
                             </button>
                         </h2>
                         <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body overflow-x-auto">
                                 <strong>This is the third item's accordion body.</strong> It is hidden by default, until
                                 the
                                 collapse plugin adds the appropriate classes that we use to style each element. These
@@ -180,11 +266,11 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                federal
+                                Dia de Sorte
                             </button>
                         </h2>
                         <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body overflow-x-auto">
                                 <strong>This is the third item's accordion body.</strong> It is hidden by default, until
                                 the
                                 collapse plugin adds the appropriate classes that we use to style each element. These
@@ -198,39 +284,19 @@
                                 does limit overflow.
                             </div>
                         </div>
+                    </div>
+                    <div class="col-12 publicidadeHorizontal">
+                        PUBLICIDADE HORIZONTAL
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                                diadesorte
+                                Super Sete
                             </button>
                         </h2>
                         <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
-                                the
-                                collapse plugin adds the appropriate classes that we use to style each element. These
-                                classes
-                                control the overall appearance, as well as the showing and hiding via CSS transitions.
-                                You can
-                                modify any of this with custom CSS or overriding our default variables. It's also worth
-                                noting
-                                that just about any HTML can go within the <code>.accordion-body</code>, though the
-                                transition
-                                does limit overflow.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                                supersete
-                            </button>
-                        </h2>
-                        <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body overflow-x-auto">
                                 <strong>This is the third item's accordion body.</strong> It is hidden by default, until
                                 the
                                 collapse plugin adds the appropriate classes that we use to style each element. These
@@ -246,13 +312,18 @@
                         </div>
                     </div>
                 </div>
-                Column
             </div>
-            <div class="col">
-                Coluna publicidade
+            <div class="col-2" id="publicidadeRight">
+                Coluna publicidade vertical
             </div>
+
         </div>
 
+        <footer class="footer" id="footerConfig">
+            <div class="col-12 col-md-12 secondary-color" id="text-footer">
+                Desenvolvido por Vinicius G. Saggioratto &copy; 2023
+            </div>
+        </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

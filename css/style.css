@@ -1,0 +1,24 @@
+* {
+    /** Reseta os estilos **/
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    margin: 5px 0 5px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: mediumseagreen;
+}  
+
+#footerConfig{
+    margin-top: 15px;
+    opacity: 0.8;
+    color: azure;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+#conteudo{
+    display: flex;
+    justify-content: center;
+}

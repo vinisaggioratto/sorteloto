@@ -34,6 +34,7 @@ function exibirResultado() {
               <td>${response.data.local}</td>
               <td>${response.data.dezenas}</td>
               <td>${acumulado}</td>
+              <td></td>
           </tr>
           `;
 

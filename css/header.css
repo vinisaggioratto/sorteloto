@@ -1,0 +1,18 @@
+#headerConfig{
+    margin-top: 8px;
+    margin-bottom: 15px;
+    /*border: 2px solid red;*/
+    height: 130px;
+}
+
+#headerConfig{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3em;
+}
+
+#menuNavbar{
+    margin-bottom: 15px;
+}
