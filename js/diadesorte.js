@@ -1,8 +1,7 @@
-let baseUrl = "https://loteriascaixa-api.herokuapp.com/api/megasena/latest"
+let baseUrl = "https://loteriascaixa-api.herokuapp.com/api/diadesorte/latest"
 /**/
 /**/
-
-function exibirResultadoMegaSena() {
+function exibirResultado() {
     resultado = document.getElementById('exibirResultado')
     let acumulado = 'Não'
     axios.get(baseUrl)
@@ -123,5 +122,3 @@ function exibirResultadoMegaSena() {
             // sempre será executado
         });
 }
-
-//export { exibirResultadoMegaSena };
