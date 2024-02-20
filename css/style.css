@@ -5,17 +5,21 @@
   }
 
 .backgroundColor1{
-    background-color: #F29F05;
+    background-color: #f2f4f5;
 }
 
 .backgroundColor2{
     background-color: #F2CB05;
 }
 
+.textColor{
+    color: #637371;
+}
+
 body{
     margin: 5px 0 5px 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #F29F05;
+    /*background-color: #C7CFD9;*/
 }  
 
 #footerConfig{
@@ -29,6 +33,7 @@ body{
 #conteudo{
     display: flex;
     justify-content: center;
+    background-color: #f2f4f5;
 }
 
 #conteudoColunas{

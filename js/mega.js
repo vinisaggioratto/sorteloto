@@ -15,7 +15,6 @@ function exibirResultado() {
           <tr>
               <th scope="col">concurso</th>
               <th scope="col">data</th>
-              <th scope="col">local</th>
               <th scope="col">Dezenas sorteadas</th>
               <th scope="col">Acumulou?</th>
               <th scope="col"></th>
@@ -31,7 +30,6 @@ function exibirResultado() {
           <tr onclick="preencherFormulario(this)">
               <td>${response.data.concurso}</td>
               <td>${response.data.data}</td>
-              <td>${response.data.local}</td>
               <td>${response.data.dezenas}</td>
               <td>${acumulado}</td>
               <td></td>
@@ -43,7 +41,6 @@ function exibirResultado() {
     <thead>
     <tr>
         <th scope="col">Premiações</th>
-        <th scope="col">Faixa</th>
         <th scope="col">Ganhadores</th>
         <th scope="col">Prêmio</th>
         <th scope="col"></th>
@@ -56,7 +53,6 @@ function exibirResultado() {
                 `
     <tr onclick="preencherFormulario(this)">
         <td scope="row">${response.data.premiacoes[0].descricao}</td>
-        <td>${response.data.premiacoes[0].faixa}</td>
         <td>${response.data.premiacoes[0].ganhadores}</td>
         <td>${response.data.premiacoes[0].valorPremio.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
         <td></td>
@@ -64,7 +60,6 @@ function exibirResultado() {
     </tr>    
     <tr onclick="preencherFormulario(this)">
     <td scope="row">${response.data.premiacoes[1].descricao}</td>
-    <td>${response.data.premiacoes[1].faixa}</td>
     <td>${response.data.premiacoes[1].ganhadores}</td>
     <td>${response.data.premiacoes[1].valorPremio.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
     <td></td>
@@ -72,7 +67,6 @@ function exibirResultado() {
 </tr>
 <tr onclick="preencherFormulario(this)">
 <td scope="row">${response.data.premiacoes[2].descricao}</td>
-<td>${response.data.premiacoes[2].faixa}</td>
 <td>${response.data.premiacoes[2].ganhadores}</td>
 <td>${response.data.premiacoes[2].valorPremio.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
 <td></td>
@@ -83,7 +77,7 @@ function exibirResultado() {
     `
 <thead>
 <tr>
-  <th scope="col" colspan="6" style="text-align:center">Próximo concurso</th>
+  <th scope="col" colspan="5" style="text-align:center">Próximo concurso</th>
 
 </tr>
 </thead>
@@ -95,7 +89,6 @@ function exibirResultado() {
               <th scope="col">Concurso</th>
               <th scope="col">Data</th>
               <th scope="col">Prêmio</th>
-              <th scope="col"></th>
               <th scope="col"></th>
               <th scope="col"></th>
           </tr>
@@ -111,7 +104,6 @@ function exibirResultado() {
               <td>${response.data.proximoConcurso}</td>
               <td>${response.data.dataProximoConcurso}</td>
               <td>${response.data.valorEstimadoProximoConcurso.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
-              <td></td>
               <td></td>
               <td></td>
           </tr>
