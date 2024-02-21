@@ -1,10 +1,10 @@
-let baseUrl2 = "https://loteriascaixa-api.herokuapp.com/api/diadesorte/latest"
+let baseUrl8 = "https://loteriascaixa-api.herokuapp.com/api/supersete/latest"
 /**/
 /**/
-function exibirResultadoDiadeSorte() {
+function exibirResultadoSuperSete() {
     resultado = document.getElementById('exibirResultado')
     let acumulado = 'Não'
-    axios.get(baseUrl2)
+    axios.get(baseUrl8)
         .then(function (response) {
             // manipula o sucesso da requisição
             console.log(response);
@@ -109,10 +109,10 @@ function exibirResultadoDiadeSorte() {
           </tr>
           `;
             
-            document.getElementById("bodytabelaDiadesorte").innerHTML = tab;
-            document.getElementById("bodytabelaDiadesorte").innerHTML += tab2;
-            document.getElementById("bodytabelaDiadesorte").innerHTML += tab3;
-            document.getElementById("bodytabelaDiadesorte").innerHTML += tab4;
+            document.getElementById("bodytabelaSuperSete").innerHTML = tab;
+            document.getElementById("bodytabelaSuperSete").innerHTML += tab2;
+            document.getElementById("bodytabelaSuperSete").innerHTML += tab3;
+            document.getElementById("bodytabelaSuperSete").innerHTML += tab4;
         })
         .catch(function (error) {
             // manipula erros da requisição

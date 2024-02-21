@@ -110,10 +110,10 @@ function exibirResultadoMegaSena() {
           </tr>
           `;
             
-            document.getElementById("bodytabela").innerHTML = tab;
-            document.getElementById("bodytabela").innerHTML += tab2;
-            document.getElementById("bodytabela").innerHTML += tab3;
-            document.getElementById("bodytabela").innerHTML += tab4;
+            document.getElementById("bodytabelaMegaSena").innerHTML = tab;
+            document.getElementById("bodytabelaMegaSena").innerHTML += tab2;
+            document.getElementById("bodytabelaMegaSena").innerHTML += tab3;
+            document.getElementById("bodytabelaMegaSena").innerHTML += tab4;
         })
         .catch(function (error) {
             // manipula erros da requisição

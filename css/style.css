@@ -41,3 +41,8 @@ body{
     height: 30px;
     margin-bottom: 10px;
 }
+
+#adsense-ad {
+    margin: 10px auto;
+    text-align: center;
+  }
