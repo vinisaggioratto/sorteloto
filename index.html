@@ -18,7 +18,7 @@
 <body onload="exibirResultadoMegaSena(), exibirResultadoLotoFacil(), exibirResultadoDiadeSorte(), exibirResultadoDuplaSena(),
         exibirResultadoFederal(), exibirResultadoLotomania(), exibirResultadoMaisMilionaria(), exibirResultadoQuina(), exibirResultadoSuperSete(),
         exibirResultadoTimemania()">
-
+<!--
     <header>
         <nav class="navbar navbar-expand-md navbar-light bg-white absolute-top">
             <div class="container">
@@ -87,6 +87,21 @@
             </div>
         </nav>
     </header>
+-->
+<header>
+    <!--MENU-->
+    <div id="menuideal">
+
+    </div>
+    <script src="js/menupadrao.js"></script>
+    <script>
+        let perfilIdeal = document.getElementById('menuideal');
+        //const perfil = window.localStorage.getItem('perfil');
+        const perfil = 'ADMINISTRADOR'
+        perfilIdeal.innerHTML = menuIdeal[perfil];
+    </script>
+</header>
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8632965793151623"
         crossorigin="anonymous"></script>
     <!-- anuncio2horizontal -->
