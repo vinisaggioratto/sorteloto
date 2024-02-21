@@ -13,7 +13,7 @@ var menuIdeal = {
             <div class="collapse navbar-collapse order-3 order-md-2" id="navbar-left">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Início</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown"
@@ -25,7 +25,7 @@ var menuIdeal = {
                             <a class="dropdown-item" href="#">Lotofácil</a>
                             <a class="dropdown-item" href="#">Lotomania</a>
                             <a class="dropdown-item" href="#">+Milionária</a>
-                            <a class="dropdown-item" href="#">Mega-Sena</a>
+                            <a class="dropdown-item" href="megasena.html">Mega-Sena</a>
                             <a class="dropdown-item" href="#">Quina</a>
                             <a class="dropdown-item" href="#">Super Sete</a>
                             <a class="dropdown-item" href="#">Timemania</a>
@@ -51,7 +51,7 @@ var menuIdeal = {
                             <a class="dropdown-item" href="#">Lotofácil</a>
                             <a class="dropdown-item" href="#">Lotomania</a>
                             <a class="dropdown-item" href="#">+Milionária</a>
-                            <a class="dropdown-item" href="#">Mega-Sena</a>
+                            <a class="dropdown-item" href="megasena.html">Mega-Sena</a>
                             <a class="dropdown-item" href="#">Quina</a>
                             <a class="dropdown-item" href="#">Super Sete</a>
                             <a class="dropdown-item" href="#">Timemania</a>
