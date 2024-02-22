@@ -22,7 +22,7 @@ var menuIdeal = {
                             <a class="dropdown-item" href="#">Dia de Sorte</a>
                             <a class="dropdown-item" href="#">Dupla Sena</a>
                             <a class="dropdown-item" href="#">Federal</a>
-                            <a class="dropdown-item" href="#">Lotofácil</a>
+                            <a class="dropdown-item" href="lotofacil.html">Lotofácil</a>
                             <a class="dropdown-item" href="#">Lotomania</a>
                             <a class="dropdown-item" href="#">+Milionária</a>
                             <a class="dropdown-item" href="megasena.html">Mega-Sena</a>
@@ -48,7 +48,7 @@ var menuIdeal = {
                             <a class="dropdown-item" href="#">Dia de Sorte</a>
                             <a class="dropdown-item" href="#">Dupla Sena</a>
                             <a class="dropdown-item" href="#">Federal</a>
-                            <a class="dropdown-item" href="#">Lotofácil</a>
+                            <a class="dropdown-item" href="lotofacil.html">Lotofácil</a>
                             <a class="dropdown-item" href="#">Lotomania</a>
                             <a class="dropdown-item" href="#">+Milionária</a>
                             <a class="dropdown-item" href="megasena.html">Mega-Sena</a>

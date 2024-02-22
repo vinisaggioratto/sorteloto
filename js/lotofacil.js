@@ -2,13 +2,14 @@ let baseUrl1 = "https://loteriascaixa-api.herokuapp.com/api/lotofacil/latest"
 /**/
 /**/
 
+
 function exibirResultadoLotoFacilResumido() {
     resultado = document.getElementById('exibirResultado')
     let acumulado = 'Não'
     axios.get(baseUrl1)
         .then(function (response) {
             // manipula o sucesso da requisição
-            console.log(response);
+            //console.log(response);
 
             let tab =
                 `
@@ -46,7 +47,7 @@ function exibirResultadoLotoFacilResumido() {
             let array = [];
             let arrayOrigin = response.data.dezenas;
             for (let i = 0; i < arrayOrigin.length; i++) {
-                console.log(arrayOrigin[i])
+                //console.log(arrayOrigin[i])
                 array += '<span class="configNumberResultados" style="border-color:#930089;">' + arrayOrigin[i] + '</span>'
             }
             tab2 +=
@@ -103,6 +104,7 @@ function exibirResultadoLotoFacilResumido() {
             // sempre será executado
         });
 }
+
 
 function exibirResultadoLotoFacil() {
 

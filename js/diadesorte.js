@@ -1,6 +1,109 @@
 let baseUrl2 = "https://loteriascaixa-api.herokuapp.com/api/diadesorte/latest"
 /**/
 /**/
+
+function exibirResultadoDiadeSorteResumido() {
+    resultado = document.getElementById('exibirResultado')
+    let acumulado = 'Não'
+    axios.get(baseUrl2)
+        .then(function (response) {
+            // manipula o sucesso da requisição
+            //console.log(response);
+
+            let tab =
+                `
+              <thead>
+              <tr>
+                  <th scope="col">concurso</th>
+                  <th scope="col">data</th>
+                  <th scope="col">Acumulou?</th>
+                </tr>
+          </thead>
+          `;
+
+            tab +=
+                `
+              <tr">
+                  <td>${response.data.concurso}</td>
+                  <td>${response.data.data}</td>
+                  <td>${acumulado}</td>
+              </tr>
+              `;
+
+            let tab2 =
+                `
+              <thead>
+              <tr>
+                  <th scope="col" colspan="3">Dezenas sorteadas</th>
+    
+              </tr>
+          </thead>
+          `;
+
+            if (response.data.acumulou) {
+                acumulado = 'Sim'
+            }
+            let array = [];
+            let arrayOrigin = response.data.dezenas;
+            for (let i = 0; i < arrayOrigin.length; i++) {
+                //console.log(arrayOrigin[i])
+                array += '<span class="configNumberResultados" style="border-color:#CB852B;">' + arrayOrigin[i] + '</span>'
+            }
+            tab2 +=
+                `
+              <tr onclick="preencherFormulario(this)">
+                  <td colspan="3">${array}</td>
+                  
+              </tr>
+              `;
+
+            let tab3 =
+                `
+    <thead>
+    <tr>
+      <th scope="col" colspan="3" style="text-align:center">Próximo concurso</th>
+    
+    </tr>
+    </thead>
+    `;
+            let tab4 =
+                `
+              <thead>
+              <tr>
+                  <th scope="col">Concurso</th>
+                  <th scope="col">Data</th>
+                  <th scope="col">Prêmio</th>
+    
+              </tr>
+          </thead>
+          `;
+
+            if (response.data.acumulou) {
+                acumulado = 'Sim'
+            }
+            tab4 +=
+                `
+              <tr onclick="preencherFormulario(this)">
+                  <td>${response.data.proximoConcurso}</td>
+                  <td>${response.data.dataProximoConcurso}</td>
+                  <td>${response.data.valorEstimadoProximoConcurso.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+              </tr>
+              `;
+
+            document.getElementById("bodytabelaDiadesorte").innerHTML = tab;
+            document.getElementById("bodytabelaDiadesorte").innerHTML += tab2;
+            document.getElementById("bodytabelaDiadesorte").innerHTML += tab3;
+            document.getElementById("bodytabelaDiadesorte").innerHTML += tab4;
+        })
+        .catch(function (error) {
+            // manipula erros da requisição
+            console.error(error);
+        })
+        .finally(function () {
+            // sempre será executado
+        });
+}
+
 function exibirResultadoDiadeSorte() {
     resultado = document.getElementById('exibirResultado')
     let acumulado = 'Não'
@@ -73,8 +176,8 @@ function exibirResultadoDiadeSorte() {
 <td></td>
 </tr>
     `;
-    let tab3=
-    `
+            let tab3 =
+                `
 <thead>
 <tr>
   <th scope="col" colspan="5" style="text-align:center">Próximo concurso</th>
@@ -82,7 +185,7 @@ function exibirResultadoDiadeSorte() {
 </tr>
 </thead>
 `;
-    let tab4=
+            let tab4 =
                 `
           <thead>
           <tr>
@@ -108,7 +211,7 @@ function exibirResultadoDiadeSorte() {
               <td></td>
           </tr>
           `;
-            
+
             document.getElementById("bodytabelaDiadesorte").innerHTML = tab;
             document.getElementById("bodytabelaDiadesorte").innerHTML += tab2;
             document.getElementById("bodytabelaDiadesorte").innerHTML += tab3;
